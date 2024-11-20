@@ -1,1 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <!--Organizo los ejercicios en secciones HTML utilizando la etiqueta <section>. 
+        Dentro de cada sección, creo un menú desplegable con la etiqueta <select>. 
+        Asigno un ID único a cada menú para identificarlo. 
+        Al seleccionar una opción, se ejecutará una función específica en el archivo index.js 
+        que está asociada a ese ID.-->
+    <section>
+        <h1>Ejercicios de: If-else y if-elseif-else JavaScript</h1> 
+        <br>
+        <div>
+            <h2>Programa que verifica si un número es par o impar</h2>
+            <input type="number" id="esParImpar" placeholder="Ingrese un número">
+            <br>
+            <button onclick="verificarParImpar()">Verificar</button>
+            <p id="resultadoParImpar"></p>            
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de calificaciones</h2>
+            <label for="calificacionAprobado">Ingrese su calificación:</label>
+            <input type="number" id="calificacionAprobado">
+            <br>
+            <button onclick="verificarAprobado()">Verificar</button>
+            <p id="resultadoAprobado"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Clasificador de calificaciones</h2>
+            <label for="calificacionClasificador">Ingrese su calificación (1-100):</label>
+            <input type="number" id="calificacionClasificador">
+            <br>
+            <button onclick="clasificarCalificacion()">Clasificar</button>
+            <p id="resultadoClasificador"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Detector de Signo</h2>
+            <label for="numero">Ingrese un número:</label>
+            <input type="number" id="numero">
+            <br>
+            <button onclick="determinarSigno()">Verificar</button>
+            <p id="resultadoSigno"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Comparador de Números</h2>
+            <label for="numero1">Ingrese el primer número:</label>
+            <input type="number" id="numero1">
+            <br>
+            <label for="numero2">Ingrese el segundo número:</label>
+            <input type="number" id="numero2">
+            <br>
+            <button onclick="compararNumeros()">Comparar</button>
+            <p id="resultadoComparacion"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Cálculo del Promedio de Dinero</h2>
+            <label for="cantidadJuan">Cantidad de dinero de Juan ($):</label>
+            <input type="number" id="cantidadJuan">
+            <br>
+            <button onclick="calcularPromedioDinero()">Calcular Promedio</button>
+            <p id="resultadoPromedio"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Comparación de Promedio</h2>
+            <label for="numero1Comparar">Ingrese el primer número (1-10):</label>
+            <input type="number" id="numero1Comparar" min="1" max="10">
+            <br>
+            <label for="numero2Comparar">Ingrese el segundo número (1-10):</label>
+            <input type="number" id="numero2Comparar" min="1" max="10">
+            <br>
+            <label for="numero3Comparar">Ingrese el tercer número (1-10):</label>
+            <input type="number" id="numero3Comparar" min="1" max="10">
+            <br>
+            <button onclick="calcularPromedioYComparar()">Calcular y Comparar</button>
+            <p id="resultadoComparacionPromedio"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de IMC</h2>
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso">
+            <br>
+            <label for="altura">Altura (m):</label>
+            <input type="number" id="altura">
+            <br>
+            <button onclick="calcularIMC()">Calcular IMC</button>
+            <p id="resultadoIMC"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Clasificador de Triángulos</h2>
+            <label for="lado1">Lado 1:</label>
+            <input type="number" id="lado1" min="0">
+            <br>
+            <label for="lado2">Lado 2:</label>
+            <input type="number" id="lado2" min="0">
+            <br>
+            <label for="lado3">Lado 3:</label>
+            <input type="number" id="lado3" min="0">
+            <br>
+            <button onclick="clasificarTriangulo()">Clasificar</button>
+            <p id="resultado"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de Descuentos</h2>
+            <label for="montoCompra">Monto de la compra ($):</label>
+            <input type="number" id="montoCompra" min="0">
+            <br>
+            <button onclick="calcularDescuento()">Calcular Descuento</button>
+            <p id="resultadoCalculadoraDescuento"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de Descuentos por Cantidad</h2>
+            <label for="precioUnitario">Precio unitario del producto ($):</label>
+            <input type="number" id="precioUnitario" min="0">
+            <br>
+            <label for="cantidadComprada">Cantidad comprada:</label>
+            <input type="number" id="cantidadComprada" min="1">
+            <br>
+            <button onclick="calcularDescuentoCantidad()">Calcular Descuento</button>
+            <p id="resultadoCalculadoraDescuentoCantidad"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Generador de Facturas</h2>
 
+            <label for="nombreClienteFactura">Nombre del cliente:</label>
+            <input type="text" id="nombreClienteFactura" />
+          
+            <label for="productoFactura">Producto:</label>
+            <input type="text" id="productoFactura" />
+          
+            <label for="cantidadFactura">Cantidad:</label>
+            <input type="number" id="cantidadFactura" />
+          
+            <label for="precioUnitarioFactura">Precio   
+           unitario:</label>
+            <input type="number" id="precioUnitarioFactura" />
+          
+            <label for="esEstudianteFactura">¿Es estudiante?:</label>
+            <input type="checkbox" id="esEstudianteFactura" />
+          
+            <label for="tipoClienteFactura">Tipo de cliente: A, B, C, etc.</label>
+            <input type="text" id="tipoClienteFactura" />
+          
+            <button onclick="generarFactura()">Generar Factura</button>
+          
+            <p id="resultadoFactura"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Ascensor</h2>
+            <label for="piso">Ingrese el piso al que desea ir:</label>
+            <input type="number" id="piso">
+            <button onclick="moverAscensor()">Ir al piso</button>
+            <p id="resultadoAscensor"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Ascensor con límite de peso</h2>
+            <label for="pesoUsuario">Ingrese su peso (kg):</label>
+            <input type="number" id="pesoUsuario">
+            <label for="pisoDestino">Ingrese el piso al que desea ir:</label>
+            <input type="number" id="pisoDestino">
+            <button onclick="moverAscensor()">Ir al piso</button>
+            <p id="resultadoAscensorPeso"></p>
+        </div>
+        <br>
+       <!--Temperatura Rango-->
+       <div>
+        <h2>Rango de temperatura</h2>
+        <label for="temperaturaInput">Ingrese temperatura actual </label>
+        <input type="number" id="temperaturaInput">
+        <button onclick="verificarRangoTemperatura()">Verificar Temperatura</button>
+        <p id="resultadoRangoTemperatura"></p>
+        </div>
+        <br>
+        <!--Temperatura Rango Alerta-->
+       <div>
+            <h2>Rango de temperatura Alerta</h2>
+            <label for="temperaturaAlertaInput">Ingrese temperatura actual: </label>
+            <input type="number" id="temperaturaAlertaInput">
+            <button onclick="verificarRangoTemperaturaAlerta()">Verificar Temperatura</button>
+            <p id="resultadoTemperaturaAlerta"></p>
+        </div>
+        <br>
+       <!--Simulador Ascensor Temperatura-->
+       <div>
+        <h2>Simulador de Ascensor Temperatura</h2>
+        <label for="pisoDestinoAscensor">Ingrese el piso de destino: </label>
+        <input type="number" id="pisoDestinoAscensor">
+        <label for="temperaturaInputAscensor">Ingrese la temperatura actual: </label>
+        <input type="number" id="temperaturaInputAscensor">
+        <button onclick="moverAscensor()">Mover Ascensor</button>
+        <p id="resultadoAscensorTemperatura"></p>
+        </div>  
+        <br>           
+    </section>
+    <br>
+    <section>
+        <h1>Ejercicios Switch - case - JavaScript</h1>
+        <br>
+        <div>
+            <h2>Elegir dos números y operador</h2>
+            <input type="number" id="num1Operador" placeholder="Ingrese el primer número">
+            <input type="text" id="operadorDosNumeros" placeholder="Ingrese el operador (+, -, *, /)">
+            <input type="number" id="num2Operador" placeholder="Ingrese el segundo número">
+            <button onclick="calcularOperadorDosNumeros()">Calcular</button>
+            <p id="resultadoOperadorDosNumeros"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Determinar categoría según la edad</h2>
+            <label for="edadUsuario">Ingrese la edad: </label>
+            <input type="number" id="edadUsuario" placeholder="Ingrese su edad">
+            <button onclick="determinarCategoria()">Verificar Categoría</button>
+            <p id="resultadoCategoria"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de Calificaciones</h2>
+            <label for="calificacionCalculadora">Ingrese su calificación (0-100): </label>
+            <input type="number" id="calificacionCalculadora">
+            <button onclick="calcularCalificacionCalculadora()">Calcular</button>
+            <p id="resultadoCalificacionCalculadora"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de Compras</h2>
+            <label for="tipoProducto">Tipo de producto (A, V, E): </label>
+            <input type="text" id="tipoProductoCalculadoraCompras">
+            <label for="cantidad">Cantidad: </label>
+            <input type="number" id="cantidadCalculadoraCompras">
+            <button onclick="calcularCalculadoraCompras()">Calcular</button>
+            <p id="resultadoCalculadoraCompras"></p>
+        </div>
+        <br>
+        <div>
+            <h2>Calculadora de Índice de Masa Corporal (IMC)</h2>
+            <label for="pesoIMC">Peso (en kg):</label>
+            <input type="number" id="pesoIMC">
+            <br>
+            <label for="alturaIMC">Altura (en metros):</label>
+            <input type="number" id="alturaIMC">
+            <br>
+            <button onclick="calcularIMC()">Calcular IMC</button>
+            <p id="resultadoCalculadoraIMC"></p>
+        </div>
+        <br>
+        <div>
+            <h2>¡Asistente de cine!</h2>
+            <label for="edadAsistenteCine">Ingrese su edad:</label>
+            <input type="number" id="edadAsistenteCine">
+            <button onclick="recomendarPelicula()">Recibir recomendación</button>
+            <p id="resultadoAsistenteCine"></p>
+        </div>
+        <br>
+        <!--Aquí iría el de la clasificación que no fuí capaz-->
+        <div>            
+        </div>
+
+    </section>
+    <br>
+    <section>
+        <h2>For - JavaScript</h2>
+        <select name="ejercicios3" id="ejercicios3">
+
+
+        </select>
+    </section>
+    <br>
+    <section>
+        <h2>While - JavaScript</h2>
+        <select name="ejercicios3" id="ejercicios3">
+
+
+        </select>
+    </section>
+    <br>
+    <section>
+        <h2>Do - while - JavaScript</h2>
+        <select name="ejercicios4" id="ejercicios4">
+
+
+        </select>
+    </section> 
+    <script src="funciones.js"></script>
+</body>
+
+</html>
